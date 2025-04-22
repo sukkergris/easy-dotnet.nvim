@@ -193,10 +193,10 @@ Although not *required* by the plugin, it is highly recommended to install one o
           end,
           build = function()
             return string.format("dotnet build %s %s", path, args)
-          end
+          end,
           watch = function ()
             return string.format("dotnet watch --project %s %s", path, args)
-          end
+          end,
         }
 
         local command = commands[action]() .. "\r"
